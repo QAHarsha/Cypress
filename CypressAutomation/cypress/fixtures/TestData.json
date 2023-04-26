@@ -1,0 +1,16 @@
+{
+	"TestCase1": {
+		"name": ["Sauce Labs Backpack", "Black"],
+		"totalamount": 32.39,
+		"firstname": "john",
+		"lastname": "Brown",
+		"postalcode": "1234"
+	},
+	"TestCase2": {
+		"name": ["Sauce Labs Bike Light", "Sauce Labs Backpack"],
+		"totalamount": 43.18,
+		"firstname": "Mike",
+		"lastname": "Dan",
+		"postalcode": "1234"
+	}
+}
