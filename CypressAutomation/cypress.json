@@ -1,0 +1,4 @@
+"cypress-cucumber-preprocessor": {
+  "step_definitions": "../../e2e/StepDefinition",
+  "features": "../../e2e/features/*.feature"
+}

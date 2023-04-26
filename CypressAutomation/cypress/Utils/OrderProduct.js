@@ -4,28 +4,27 @@ const Checkout = require('../../POM/Checkout');
 
 class OrderProducts {
 
-    async orderWithValidData(productData){
+    async selectOrder(productData){
 
-         productData.name.forEach((productName) => {
-            products.addProductToCart(productName);
-        });
+        await products.addProductToCart(productName);
 
         await products.clickCart();
         cy.wait(1000);
 
         await products.clickCheckout();
         cy.wait(1000);
+    }
 
+    async enterUserData(productData){
         checkout.enterFirstName(productData.firstname);
         checkout.enterSecondName(productData.lastname);
         await checkout.enterPostalCode(productData.postalcode);
-        
+    }
+
+    async clickPlaceOrderButton(productData){
         cy.wait(1000);
         await checkout.clickContinue();
         cy.wait(1000);
-
-        expect(checkout.getTotal()).to.eq(productData.totalamount);
-
         await checkout.clickFinish();
         cy.wait(1000);
     }

@@ -11,6 +11,10 @@ class Products {
     await cy.get(this.cart).click();
   }
 
+  async getPageTitle() {
+    await cy.title();
+  }
+  
   async addProductToCart(productName) {
     await cy.contains(productName).siblings(this.product).click();
   }
